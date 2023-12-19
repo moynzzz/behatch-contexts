@@ -97,7 +97,7 @@ class TableContext extends BaseContext
      * @Then the :colIndex column of the :rowIndex row in the :table table should contain :text
      * @throws \Exception
      */
-    public function theStColumnOfTheStRowInTheTableShouldContain($colIndex, $rowIndex, $table, $text): void
+    public function theStColumnOfTheStRowInTheTableShouldContain($colIndex, $rowIndex, $table, string $text): void
     {
         $rowSelector = "$table tbody tr";
         $rows = $this->getSession()->getPage()->findAll('css', $rowSelector);
